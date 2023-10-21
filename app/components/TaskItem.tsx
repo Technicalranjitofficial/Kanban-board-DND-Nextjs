@@ -38,7 +38,7 @@ const TaskItem = (props:prop) => {
     };
     if (isDragging) {
         return (
-            <div ref={setNodeRef} style={style} className="w-full bg-green-500 p-5"></div>
+            <div ref={setNodeRef} style={style} className="w-full border border-red-500 rounded-md p-5"></div>
         );
     }
 
@@ -48,7 +48,7 @@ const TaskItem = (props:prop) => {
             {...attributes}
             style={style}
             ref={setNodeRef}
-            className={`w-full ${colors[task.columnId as keyof typeof colors]} p-3`}
+            className={`w-full rounded-s-md ${colors[task.columnId as keyof typeof colors]} p-3`}
         >
             <h1>{task.title}</h1>
         </div>
